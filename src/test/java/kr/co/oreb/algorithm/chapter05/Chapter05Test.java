@@ -32,4 +32,19 @@ public class Chapter05Test {
         bfs.bfs(GRAPH, 1, new HashSet<>());
     }
 
+    @Test
+    public void IceGameTest() {
+        IceGame iceGame = new IceGame();
+        int n = 4;
+        int m = 5;
+        int[][] board = {
+            {0, 0, 1, 1, 0},
+            {0, 0, 0, 1, 1},
+            {1, 1, 1, 1, 1},
+            {0, 0, 0, 0, 0},
+        };
+
+        iceGame.execute(board, n, m);
+    }
+
 }
