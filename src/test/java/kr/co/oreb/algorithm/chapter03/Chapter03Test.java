@@ -1,9 +1,9 @@
-package kr.co.oreb.algorithm.chapter03.greedy;
+package kr.co.oreb.algorithm.chapter03;
 
 import org.junit.jupiter.api.Test;
 
 
-public class GreedyTest {
+public class Chapter03Test {
 
     @Test
     public void bigNumber() {

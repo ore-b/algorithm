@@ -1,4 +1,4 @@
-package kr.co.oreb.algorithm.chapter03.greedy;
+package kr.co.oreb.algorithm.chapter03;
 
 import java.util.Arrays;
 
