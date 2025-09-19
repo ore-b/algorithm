@@ -47,4 +47,18 @@ public class Chapter05Test {
         iceGame.execute(board, n, m);
     }
 
+    @Test
+    public void MazeTest() {
+        Maze maze = new Maze();
+
+        int[][] board = {
+            {1, 1, 1},
+            {1, 1, 1},
+            {0, 1, 0},
+            {0, 1, 1}
+        };
+
+        maze.execute(board, 4, 3);
+    }
+
 }
