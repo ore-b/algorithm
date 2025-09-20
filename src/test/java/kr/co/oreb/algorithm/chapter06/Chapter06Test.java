@@ -20,5 +20,12 @@ public class Chapter06Test {
         insertionSort.execute(array);
     }
 
+    @Test
+    void quickSortTest() {
+        QuickSort quickSort = new QuickSort();
+        int[] array = {7, 5, 9, 0, 3, 1, 6, 2, 4, 8};
+        quickSort.execute(array);
+    }
+
 
 }
