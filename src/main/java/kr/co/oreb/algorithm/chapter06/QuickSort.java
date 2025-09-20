@@ -18,7 +18,7 @@ public class QuickSort {
             return;
         }
 
-        // i, j 두 포인터를 양 끝에서 시작
+        //두 포인터를 양 끝에서 시작
         int lPointer = start;
         int rPointer = end;
 
@@ -41,9 +41,10 @@ public class QuickSort {
                 rPointer--;
             }
 
-            // lPointer 와 rPointer 의 값이 교차하지 않았다면 풀스캔이 되지 않았음
-            // lPointer <= rPointer면 잘못된 쪽에 있는 원소들이므로 서로 교환
-            // lPointer == rPointer 인 경우에도 들어옴. swap 은 의미가 없지만
+            // lPointer <= rPointer 이면
+            // lPointer 와 rPointer 의 값이 교차하지 않았다면 정렬이 끝나지 않았음
+            // 즉, 잘못된 값 발견, 서로 교환
+            // lPointer == rPointer 인 경우에도 들어옴. swap 은 의미가 없지만, 포인터를 ++,-- 하기위함
             if (lPointer <= rPointer) {
                 int tmp = array[lPointer];
                 array[lPointer] = array[rPointer];
@@ -56,12 +57,8 @@ public class QuickSort {
 
         // 2) 분할된 두 구간을 재귀 정렬
         //    [left .. j]  |  [i .. right]
-        if (start < rPointer) {
-            quick(array, start, rPointer);
-        }
-        if (lPointer < end) {
-            quick(array, lPointer, end);
-        }
+        quick(array, start, rPointer);
+        quick(array, lPointer, end);
     }
 
 }
