@@ -2,9 +2,7 @@ package kr.co.oreb.algorithm.chapter09;
 
 import java.util.Arrays;
 import java.util.List;
-import kr.co.oreb.algorithm.Description;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import kr.co.oreb.algorithm.chapter09.dto.Edge;
 
 public class Dijkstra {
 
@@ -38,7 +36,7 @@ public class Dijkstra {
 
         for (Edge e : graph.get(start)) {
             //시작 노드와 인접한 노드들 거리 갱신
-            dist[e.to] = Math.min(dist[e.to], e.cost);
+            dist[e.to] = Math.min(dist[e.to], e.weight);
         }
 
         // 남은 노드에 대해 최대 n-1번 반복
@@ -59,7 +57,7 @@ public class Dijkstra {
                 }
 
                 //now 노드까지의 거리와 e 노드까지의 거리를 더한다
-                int newDist = dist[now] + e.cost;
+                int newDist = dist[now] + e.weight;
 
                 if (newDist < dist[e.to]) {
                     //newDist 가 먼저 계산해 놓은 e 노드까지의 거리보다 가깝다면 갱신
@@ -87,15 +85,6 @@ public class Dijkstra {
             }
         }
         return node;
-    }
-
-    @Description("간선 클래스")
-    @RequiredArgsConstructor
-    @Getter
-    public static class Edge {
-
-        private final int to;
-        private final int cost;
     }
 
 }
