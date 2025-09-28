@@ -52,4 +52,10 @@ public class Chapter09Test {
         f.execute();
     }
 
+    @Test
+    void mail() {
+        Mail mail = new Mail();
+        mail.execute();
+    }
+
 }
