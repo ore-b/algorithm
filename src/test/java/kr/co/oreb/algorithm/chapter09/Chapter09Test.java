@@ -46,4 +46,16 @@ public class Chapter09Test {
         fw.execute();
     }
 
+    @Test
+    void futureCity() {
+        FutureCity f = new FutureCity();
+        f.execute();
+    }
+
+    @Test
+    void mail() {
+        Mail mail = new Mail();
+        mail.execute();
+    }
+
 }
