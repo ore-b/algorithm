@@ -40,4 +40,10 @@ public class Chapter09Test {
         dijkstra.execute(graph, 1);
     }
 
+    @Test
+    void floydWarshallTest() {
+        FloydWarshall fw = new FloydWarshall();
+        fw.execute();
+    }
+
 }
